@@ -55,7 +55,7 @@ extern "C" {
 
 		The return value indicates the type of token that was read,
 		and the value of *img corresponds to the token type, as
-		described below.
+		described under "return value", above.
 */
 int skil_token(FILE *input, char **img);
 
