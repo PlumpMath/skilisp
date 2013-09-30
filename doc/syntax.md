@@ -1,5 +1,5 @@
 
-# lexical grammar:
+# lexical grammar
 
 This will be extended in the near future, but for now:
 
