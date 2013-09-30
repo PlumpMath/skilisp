@@ -21,6 +21,7 @@ extern "C" {
 
 /* The memory allocator returned an error. */
 #define SKIL_ENOMEM -1
+
 /* The input stream contained an invalid token. */
 #define SKIL_BAD_TOKEN -2
 
