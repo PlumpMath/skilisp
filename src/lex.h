@@ -14,7 +14,7 @@ extern "C" {
 */
 /*
 	We start counting at 256 so as not to conflict with any ascii value.
-	This allows us to e.g. use '(' as the token identifier for the literal
+	This allows us to e.g. use '(' as the token type for the literal
 	character '(', without having to think about whether that collides
 	with anything else.
 
