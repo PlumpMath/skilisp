@@ -22,6 +22,7 @@ extern "C" {
 #define SKIL_ATOM 256
 #define SKIL_EOF 257
 
+int skil_token(FILE *input, char **img);
 /*
 	`skil_token` reads the next token from `input`, returning it's type.
 
@@ -63,7 +64,6 @@ extern "C" {
 		and the value of *img corresponds to the token type, as
 		described under "return value", above.
 */
-int skil_token(FILE *input, char **img);
 
 #ifdef __cplusplus
 }
