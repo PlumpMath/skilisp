@@ -12,7 +12,13 @@ extern "C" {
 /*
 	Token type constants. see the description of skil_token for more info.
 */
-/* we start counting at 256 so as not to conflict with any ascii value. */
+/*
+	We start counting at 256 so as not to conflict with any ascii value.
+	This allows us to e.g. use '(' as the token identifier for the literal
+	character '(', without having to think about whether that collides
+	with anything else.
+
+*/
 #define SKIL_ATOM 256
 #define SKIL_EOF 257
 
