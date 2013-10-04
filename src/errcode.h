@@ -25,6 +25,9 @@ extern "C" {
 /* The input stream contained an invalid token. */
 #define SKIL_BAD_TOKEN -2
 
+/* The input stream did not parse correctly. */
+#define SKIL_BAD_PARSE -3
+
 #ifdef __cplusplus
 }
 #endif
