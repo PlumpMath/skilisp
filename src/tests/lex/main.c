@@ -12,11 +12,11 @@ int main(void) {
 		case ')':
 			printf("%c\n", token_type);
 			break;
-		case SKIL_ATOM:
+		case SKIL_TOKEN_ATOM:
 			printf("ATOM: %s\n", img);
 			free(img);
 			break;
-		case SKIL_EOF:
+		case SKIL_TOKEN_EOF:
 			return 0;
 			break;
 		default:

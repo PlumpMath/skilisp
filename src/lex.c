@@ -14,7 +14,7 @@ int skil_token(FILE *input, char **img) {
 
 	if(skipws_and_comments(input) < 0) {
 		/* end of file */
-		return SKIL_EOF;
+		return SKIL_TOKEN_EOF;
 	}
 
 	c = fgetc(input);
@@ -27,7 +27,7 @@ int skil_token(FILE *input, char **img) {
 		break;
 	case EOF:
 		*img = NULL;
-		return SKIL_EOF;
+		return SKIL_TOKEN_EOF;
 	default:
 		if(!isprint(c)) {
 			/* invalid character; return an error. */
@@ -99,7 +99,8 @@ static int skip_rest_of_line(FILE *input) {
 		atom.
 
 	postconditions:
-		scans in the atom, stores a pointer to it in *img, and returns SKIL_ATOM.
+		scans in the atom, stores a pointer to it in *img, and returns
+		SKIL_TOKEN_ATOM.
 
 	The following errors may occur, in which case *img will be NULL:
 		SKIL_ENOMEM
@@ -123,7 +124,7 @@ int scan_atom(FILE *input, char **img) {
 
 	*img = buf.buf;
 	ungetc(c, input);
-	return SKIL_ATOM;
+	return SKIL_TOKEN_ATOM;
 }
 
 int isatomchar(int c) {

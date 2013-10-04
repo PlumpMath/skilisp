@@ -19,8 +19,8 @@ extern "C" {
 	with anything else.
 
 */
-#define SKIL_ATOM 256
-#define SKIL_EOF 257
+#define SKIL_TOKEN_ATOM 256
+#define SKIL_TOKEN_EOF 257
 
 int skil_token(FILE *input, char **img);
 /*
@@ -52,8 +52,8 @@ int skil_token(FILE *input, char **img);
 
 		'(' - an opening parenthesis. *img will be NULL.
 		')' - a closing parenthesis. *img will be NULL.
-		SKIL_EOF - The end of file. *img will be NULL.
-		SKIL_ATOM - an atom. *img will point to a string representing
+		SKIL_TOKEN_EOF - The end of file. *img will be NULL.
+		SKIL_TOKEN_ATOM - an atom. *img will point to a string representing
 			the atom.
 
 	postconditions:
